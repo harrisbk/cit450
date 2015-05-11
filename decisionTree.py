@@ -59,3 +59,29 @@ class analyzeList():
                 count += 1
             except:
                 pass
+
+    def findPath(self, graph, start, end, path):
+
+        path += start
+
+        if start == end:
+            print path
+            return path
+
+        if start not in graph:
+            print "None"
+            return None
+
+        for node in graph[start]:
+            if node not in path:
+                path2 = self.findPath(graph, node, end, path)
+                print path2
+                return path2
+
+        print "None"
+        return None
+
+graph = {'A': ['B','C'],'B': ['E','D'],'C': ['D'],'D': ['C'],'E': ['F'],'F': ['C']}
+do = analyzeList()
+
+do.findPath(graph,'A','C',[])
