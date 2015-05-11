@@ -1,6 +1,6 @@
 #======================================#
 #
-# file: irisReader
+# file: kNearestNeighbors
 # desc: read a csv file, randomize data,
 #   stratify it, apply a method to
 #   predict the value, and return the
@@ -18,7 +18,7 @@ from operator import itemgetter
 from collections import Counter
 #from sklearn import neighbors
 
-class analyzeIris():
+class analyzeList():
 
     def __init__(self):
         self.list =[]
@@ -114,7 +114,7 @@ class analyzeIris():
 
         print "The learned value was accurate for "+ str(self.percent) +"% of the test data"
 
-start = analyzeIris()
+start = analyzeList()
 start.menu()
 start.read()
 start.split()
